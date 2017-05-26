@@ -4,7 +4,7 @@
 + <a href="https://start.spring.io/" target="_blank">创建一个Spring Boot初始项目</a>
 + <a href="https://springcloud.cc/" target="_blank">Spring Cloud 相关项目</a>
 
-###项目结构
+### 项目结构
 + config : 配置文件仓库
 + api-config : 配置管理中心
 + api-registry : 服务注册中心
