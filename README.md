@@ -47,9 +47,11 @@
     1.使用http get "localhost:8881/author", 来使用网关提供的打印author服务。
 	2.网关收到打印author的请求，开始打印并返回author为"Jonsy（author.name具体的值定义在配置文件中）。
 ![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author1.jpg)
+###
 	4.修改配置仓库中service1-dev.properties中的author.name为"frank"。
 	5.使用http post "localhost:8881/bus/refresh?destination=gateway:**",刷新服务名为gateway的所有服务实例。
 ![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author2.jpg)
+###	
 	6.再次使用http get "localhost:8881/author", 来使用网关提供的打印author服务。
 	7.网关收到打印author的请求，开始打印并返回author为"frank”（配置修改已生效）
 ![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author3.jpg)
