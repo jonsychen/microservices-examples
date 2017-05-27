@@ -32,7 +32,7 @@
 	2.网关收到请求后，解析请求的url，并匹配动态路由表，找到对应的服务名后向注册中心获取service1服务的当前运行的所有实例，再通过客服端负载均衡，将请求发送到指定的server1服务示例上。
 	3.service1服务实例收到sayhi请求，同样经过客户端负载均衡后，调用service2服务的指定实例。
 	4.service2服务实例收到sayhi请求，开始执行sayhi方法，打印并返回“hi from service2”。
-	![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/service1_sayhi.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/service1_sayhi.png)
 
 ### 示例2(异步)
 	1.使用postman通过网关访问service1提供的send服务。
@@ -41,18 +41,18 @@
 	4.service2监听指定队列，接收到待处理的消息，打印消息内容。
 	5.service2处理完消息后，将处理结果发送到指定队列。
 	6.service1监听指定结果通知队列，接收到待处理的消息，打印消息内容。
-	![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/service1_send.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/service1_send.png)
 
 ### 示例3（实现动态配置文件的更改）
     1.使用http get "localhost:8881/author", 来使用网关提供的打印author服务。
 	2.网关收到打印author的请求，开始打印并返回author为"Jonsy（author.name具体的值定义在配置文件中）。
-	![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author1.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author1.png)
 	4.修改配置仓库中service1-dev.properties中的author.name为"frank"。
 	5.使用http post "localhost:8881/bus/refresh?destination=gateway:**",刷新服务名为gateway的所有服务实例。
-	![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author2.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author2.png)
 	6.再次使用http get "localhost:8881/author", 来使用网关提供的打印author服务。
 	7.网关收到打印author的请求，开始打印并返回author为"frank”（配置修改已生效）
-	![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author3.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/gateway_author3.png)
 
 
 ### 需要注意的地方
