@@ -12,9 +12,9 @@ import com.mtp.service.MQService;
 @EnableEurekaClient
 @EnableHystrix
 @EnableBinding(MQService.class)
-public class MtpService2Application {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MtpService2Application.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
