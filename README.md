@@ -14,7 +14,7 @@
 + api-service2 : 测试服务2
 
 ### 项目架构
-![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84.png)
+![image](https://github.com/jonsychen/microservices-examples/blob/master/etc/architecture.png)
 
 ## RUN DEMO
 ### 运行api-registry
